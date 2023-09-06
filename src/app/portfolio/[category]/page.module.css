@@ -1,3 +1,85 @@
-.container  {
-    
+.container {
+}
+.title {
+  color: #ae10de;
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+.category-container {
+  display: flex;
+  gap: 5rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.category-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  @media (max-width: 768px) {
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+
+/* When we use nth-child(2n + 1) it means that we are selecting every odd element */
+
+@media (min-width: 768px) {
+  .category-container:nth-child(2n + 1) {
+    flex-direction: row-reverse;
+  }
+}
+@media (max-width: 768px) {
+  .category-container {
+    flex-direction: column;
+  }
+  .category-image {
+    order: -1;
+  }
+}
+
+.category-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ae10de;
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+.category-text {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .category-image {
+    flex: 1;
+    height: 20rem;
+    position: relative;
+  }
+}
+@media (max-width: 768px) {
+  .category-image {
+    height: 15rem;
+    position: relative;
+  }
+}
+
+.image {
+  object-fit: contain;
 }

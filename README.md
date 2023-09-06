@@ -72,6 +72,11 @@ In this project, I built a MileStone app for improving my skills. I used Next.js
 
 - [x] Project Setup
 - [x] Create App Routes
+- [x] Create App Layout
+- [x] Create App Components
+- [x] Create App Pages
+- [x] Create App Styles
+- [x] Implement Mobile First Design
 
 
 

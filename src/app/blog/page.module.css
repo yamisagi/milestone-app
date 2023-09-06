@@ -1,1 +1,44 @@
-.container  {}
+.container {
+}
+
+.blog-container {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 0 15px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.blog-image {
+  border-radius: 10px;
+}
+
+.image {
+  object-fit: contain;
+}
+
+.blog-content {
+  flex: 1;
+  @media (max-width: 768px) {
+    margin-top: 1rem;
+  }
+}
+
+.blog-title {
+  margin-bottom: 1rem;
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+}
+
+.blog-description {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #c4c4c4;
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+}
