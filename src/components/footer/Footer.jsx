@@ -42,6 +42,7 @@ const Footer = () => {
               width={15}
               height={15}
               className={styles['social-icon']}
+              quality={100}
             />
           </Link>
         ))}
