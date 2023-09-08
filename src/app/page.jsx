@@ -17,7 +17,10 @@ export default function Home() {
         <Button text='See My Work' path='/portfolio' />
       </section>
       <section className={styles.section}>
-        <Image src={Hero} alt='Hero' className={styles.hero} />
+        <Image src={Hero} alt='Hero' className={styles.hero}  
+        
+          priority
+        />
       </section>
     </div>
   );

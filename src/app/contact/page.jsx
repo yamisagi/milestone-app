@@ -13,6 +13,7 @@ const Contact = () => {
             alt='Contact me'
             className={styles.image}
             fill
+            lazyBoundary='200px'
           />
         </div>
         <form className={styles.form}>

@@ -36,9 +36,9 @@
   }
 }
 .title {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 700;
-  background: linear-gradient(to bottom, #ae10de, #e188ee);
+  background: linear-gradient(to bottom, #7b149d, #fadbff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -48,8 +48,8 @@
   }
 }
 .description {
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-size: 2rem;
+  font-weight: 500;
   line-height: 1.5;
   transition: all 0.3s ease;
   @media (max-width: 768px) {
@@ -58,7 +58,7 @@
 }
 .title:hover,
 .description:hover {
-  transform: scale(1.1);
+  transform: scale(1.03);
 }
 
 .description::selection {

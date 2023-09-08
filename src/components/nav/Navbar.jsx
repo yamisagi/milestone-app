@@ -5,6 +5,8 @@ import Link from 'next/link';
 import styles from './nav.module.css';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
+import ThemeToggle from '../ThemeToggle/ThemeToggle';
+import { ThemeContext } from '../../../context/ThemeContext';
 
 const links = [
   {
@@ -43,6 +45,23 @@ function classNames(...classes) {
 }
 
 const Navbar = () => {
+  const { theme } = React.useContext(ThemeContext);
+
+  const themeFontColors = (item) => {
+    return theme === 'dark'
+      ? classNames(
+          item.current
+            ? 'bg-gray-900 text-white'
+            : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+          'block rounded-md px-3 py-1 text-base font-medium'
+        )
+      : classNames(
+          item.current
+            ? 'bg-gray-900 text-white'
+            : 'text-gray-700 hover:bg-gray-800 hover:text-white',
+          'block rounded-md px-3 py-1 text-base font-medium'
+        );
+  };
   return (
     <Disclosure as='nav'>
       {({ open }) => (
@@ -66,31 +85,30 @@ const Navbar = () => {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className='flex flex-1 items-end justify-center md:items-stretch md:justify-between'>
-                <div className='flex items-center'>
-                  <Link href='/' className='text-white text-2xl font-bold'>
+              <div
+                className='flex flex-1 justify-center 
+                md:items-stretch md:justify-between'
+              >
+                <div className='flex items-center '>
+                  <Link
+                    href='/'
+                    className={
+                      theme === 'dark'
+                        ? 'text-white text-2xl font-bold'
+                        : 'text-gray-900 text-2xl font-bold'
+                    }
+                  >
                     Yamisagi
                   </Link>
                 </div>
-                <div
-                  className='hidden md:block md:space-x-4
-                    '
-                >
-                  <div
-                    className='flex space-x-2
-                    flex-1 
-                  '
-                  >
+                <div className='hidden md:flex md:ml-12'>
+                  <div className='flex items-center'>
+                    <ThemeToggle />
                     {links.map((item) => (
                       <Link
                         key={item.name}
                         href={item.path}
-                        className={classNames(
-                          item.current
-                            ? 'bg-gray-900 text-white'
-                            : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                          'rounded-md px-3 py-2 text-sm font-medium'
-                        )}
+                        className={themeFontColors(item)}
                         aria-current={item.current ? 'page' : undefined}
                       >
                         {item.name}
@@ -105,16 +123,12 @@ const Navbar = () => {
 
           <Disclosure.Panel className='md:hidden'>
             <div className='space-y-1 px-2 pb-3 pt-2'>
+              <ThemeToggle />
               {links.map((item) => (
                 <Disclosure.Button
                   key={item.name}
                   href={item.path}
-                  className={classNames(
-                    item.current
-                      ? 'bg-gray-900 text-white'
-                      : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'block rounded-md px-3 py-1 text-base font-medium'
-                  )}
+                  className={themeFontColors(item)}
                   aria-current={item.current ? 'page' : undefined}
                 >
                   <Link

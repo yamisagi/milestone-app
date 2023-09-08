@@ -77,6 +77,10 @@ In this project, I built a MileStone app for improving my skills. I used Next.js
 - [x] Create App Pages
 - [x] Create App Styles
 - [x] Implement Mobile First Design
+- [x] Implement Responsive Design
+- [x] Create Theme Context
+- [x] Implement Dark Mode & Light Mode Switch 
+- [x] Improve Transition When Switching Theme
 
 
 
