@@ -3,10 +3,10 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from './nav.module.css';
-import { Disclosure, Menu, Transition } from '@headlessui/react';
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
-import ThemeToggle from '../ThemeToggle/ThemeToggle';
-import { ThemeContext } from '../../../context/ThemeContext';
+import { Disclosure } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import ThemeToggle from '@/components/ToggleBtn/ThemeToggle'
+import { ThemeContext } from '@/context/ThemeContext';
 
 const links = [
   {

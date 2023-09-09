@@ -59,10 +59,6 @@
 <!-- add asset here later -->
 
 
-https://github.com/yamisagi/nextflix-ts-app/assets/84624853/54990f38-cd80-43dc-b9d7-ba61288781fa
-
-
-
 In this project, I built a MileStone app for improving my skills. I used Next.js.
 
 
@@ -81,6 +77,7 @@ In this project, I built a MileStone app for improving my skills. I used Next.js
 - [x] Create Theme Context
 - [x] Implement Dark Mode & Light Mode Switch 
 - [x] Improve Transition When Switching Theme
+- [x] Implement Next.js SWR (Stale While Revalidate)
 
 
 
